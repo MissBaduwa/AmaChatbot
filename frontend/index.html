@@ -1,0 +1,1059 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ama Eatery - Authentic Ghanaian Cuisine in Accra</title>
+    <meta name="description" content="Experience authentic Ghanaian flavors at Ama Eatery in Accra. From traditional Kenkey to Jollof Rice, taste the best of Ghana's culinary heritage.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .playfair {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #fffbeb 0%, #fed7aa 50%, #fecaca 100%);
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 5rem;
+            left: 5rem;
+            width: 18rem;
+            height: 18rem;
+            background: #fed7aa;
+            border-radius: 50%;
+            filter: blur(3rem);
+            opacity: 0.1;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 5rem;
+            right: 5rem;
+            width: 24rem;
+            height: 24rem;
+            background: #fecaca;
+            border-radius: 50%;
+            filter: blur(3rem);
+            opacity: 0.1;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Navigation */
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 0;
+            position: relative;
+            z-index: 10;
+        }
+
+        .logo {
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: #9a3412;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #c2410c;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #7c2d12;
+        }
+
+        /* Hero Content */
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 70vh;
+            position: relative;
+            z-index: 10;
+        }
+
+        .hero-text {
+            flex: 1;
+            max-width: 50%;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 700;
+            color: #7c2d12;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-subtitle {
+            color: #dc2626;
+            display: block;
+        }
+
+        .hero-subtitle-2 {
+            color: #d97706;
+            display: block;
+        }
+
+        .hero-description {
+            font-size: 1.25rem;
+            color: #c2410c;
+            margin-bottom: 2rem;
+            max-width: 32rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 9999px;
+            font-size: 1.125rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: #ea580c;
+            color: white;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-primary:hover {
+            background: #c2410c;
+            transform: scale(1.05);
+        }
+
+        .btn-secondary {
+            border: 2px solid #ea580c;
+            color: #ea580c;
+            background: transparent;
+        }
+
+        .btn-secondary:hover {
+            background: #ea580c;
+            color: white;
+        }
+
+        .hero-info {
+            display: flex;
+            gap: 1.5rem;
+            color: #c2410c;
+            flex-wrap: wrap;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Hero Image */
+        .hero-image {
+            flex: 1;
+            max-width: 50%;
+            position: relative;
+        }
+
+        .hero-circle {
+            width: 24rem;
+            height: 24rem;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            border: 8px solid white;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .hero-circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .badge {
+            position: absolute;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            color: white;
+            font-weight: 700;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .badge-fresh {
+            top: -1rem;
+            right: -1rem;
+            width: 6rem;
+            height: 6rem;
+            background: #ea580c;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: pulse 2s infinite;
+        }
+
+        .badge-authentic {
+            bottom: -1rem;
+            left: -1rem;
+            width: 8rem;
+            height: 8rem;
+            background: #dc2626;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.875rem;
+        }
+
+        /* Menu Section */
+        .menu {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #7c2d12;
+            margin-bottom: 1rem;
+        }
+
+        .section-title p {
+            font-size: 1.25rem;
+            color: #c2410c;
+            max-width: 32rem;
+            margin: 0 auto;
+        }
+
+        .title-divider {
+            width: 6rem;
+            height: 0.25rem;
+            background: #ea580c;
+            margin: 1.5rem auto 0;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .menu-item {
+            background: white;
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            border: 1px solid #fed7aa;
+            transition: all 0.3s;
+        }
+
+        .menu-item:hover {
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            transform: translateY(-0.5rem);
+        }
+
+        .menu-image {
+            position: relative;
+            height: 12rem;
+            overflow: hidden;
+        }
+
+        .menu-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .menu-badges {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .menu-badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            color: white;
+            font-size: 0.875rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .badge-popular {
+            background: #dc2626;
+        }
+
+        .badge-veggie {
+            background: #16a34a;
+        }
+
+        .menu-price {
+            position: absolute;
+            bottom: 1rem;
+            right: 1rem;
+            background: white;
+            border-radius: 9999px;
+            padding: 0.5rem 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu-price span {
+            color: #ea580c;
+            font-weight: 700;
+            font-size: 1.125rem;
+        }
+
+        .menu-content {
+            padding: 1.5rem;
+        }
+
+        .menu-content h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #7c2d12;
+            margin-bottom: 0.75rem;
+        }
+
+        .menu-content p {
+            color: #c2410c;
+            margin-bottom: 1.5rem;
+        }
+
+        .order-btn {
+            width: 100%;
+            background: linear-gradient(135deg, #ea580c 0%, #dc2626 100%);
+            color: white;
+            padding: 0.75rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .order-btn:hover {
+            transform: scale(1.05);
+        }
+
+        /* About Section */
+        .about {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #fff7ed 0%, #fed7aa 100%);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #7c2d12;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text p {
+            font-size: 1.25rem;
+            color: #c2410c;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text p:last-of-type {
+            font-size: 1.125rem;
+            color: #ea580c;
+            margin-bottom: 2rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 1rem;
+            background: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-number {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #7c2d12;
+        }
+
+        .stat-label {
+            color: #c2410c;
+        }
+
+        .visit-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .visit-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #7c2d12;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: #c2410c;
+            margin-bottom: 0.75rem;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 20rem;
+            object-fit: cover;
+            border-radius: 1rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+
+        /* Footer */
+        .footer {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #7c2d12 0%, #dc2626 100%);
+            color: white;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-section h3 {
+            font-size: 1.875rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section h4 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section p {
+            color: #fed7aa;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-link {
+            width: 2.5rem;
+            height: 2.5rem;
+            background: #ea580c;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .social-link:hover {
+            background: #c2410c;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: #fed7aa;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .hours-table {
+            color: #fed7aa;
+        }
+
+        .hours-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+
+        .special-offer {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background: #9a3412;
+            border-radius: 0.5rem;
+        }
+
+        .special-offer h5 {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .special-offer p {
+            font-size: 0.875rem;
+            color: #fed7aa;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #9a3412;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            text-align: center;
+            color: #fed7aa;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-text, .hero-image {
+                max-width: 100%;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero-info {
+                justify-content: center;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animations */
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Chatbot Widget */
+        .chatbot-widget {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .chatbot-widget iframe {
+            border: none;
+            border-radius: 12px;
+        }
+
+        @media (max-width: 768px) {
+            .chatbot-widget {
+                bottom: 10px;
+                right: 10px;
+                width: 300px;
+                height: 380px;
+            }
+
+            .chatbot-widget iframe {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        df-messenger {
+    --df-messenger-button-titlebar-font-color: white;
+    --df-messenger-send-icon: #ffa500;
+    --df-messenger-user-message: #fff0e1;
+    --df-messenger-bot-message: #ffe5b4;
+    --df-messenger-button-titlebar-font-color: white;
+  }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <!-- Navigation -->
+            <nav class="nav">
+                <div class="logo playfair">Ama Eatery</div>
+                <ul class="nav-links">
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Hero Content -->
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title playfair">
+                        Authentic
+                        <span class="hero-subtitle">Ghanaian</span>
+                        <span class="hero-subtitle-2">Flavors</span>
+                    </h1>
+                    <p class="hero-description">
+                        Experience the rich culinary heritage of Ghana in the heart of Accra. 
+                        From traditional Kenkey to contemporary presentations, every dish tells a story.
+                    </p>
+                    
+                    <div class="hero-buttons">
+                        <a href="#menu" class="btn btn-primary">View Menu</a>
+                        <a href="#contact" class="btn btn-secondary">Reserve Table</a>
+                    </div>
+
+                    <div class="hero-info">
+                        <div class="info-item">
+                            <span>📍</span>
+                            <span>Accra, Ghana</span>
+                        </div>
+                        <div class="info-item">
+                            <span>🕙</span>
+                            <span>Open 10AM - 10PM</span>
+                        </div>
+                        <div class="info-item">
+                            <span>📞</span>
+                            <span>+233 123 456 789</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-image">
+                    <div class="hero-circle">
+                        <img src="Waakye.jpg" alt="Delicious Ghanaian Food">
+                    </div>
+                    <div class="badge badge-fresh">Fresh!</div>
+                    <div class="badge badge-authentic">Authentic<br>Taste</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <div class="section-title">
+                <h2 class="playfair">Our Menu</h2>
+                <p>Discover the authentic flavors of Ghana, crafted with love and served with pride</p>
+                <div class="title-divider"></div>
+            </div>
+
+            <div class="menu-grid">
+                <!-- Kenkey -->
+                <div class="menu-item">
+                    <div class="menu-image">
+                        <img src="kenkey1.jpg" alt="Kenkey">
+                        <div class="menu-badges">
+                            <span class="menu-badge badge-popular">⭐ Popular</span>
+                        </div>
+                        <div class="menu-price">
+                            <span>₵30</span>
+                        </div>
+                    </div>
+                    <div class="menu-content">
+                        <h3>Kenkey</h3>
+                        <p>Traditional fermented corn dough served with pepper sauce and fried fish</p>
+                        <button class="order-btn">Order In Chatbot</button>
+                    </div>
+                </div>
+
+                <!-- Jollof Rice -->
+                <div class="menu-item">
+                    <div class="menu-image">
+                        <img src="jollof.jpg" alt="Jollof Rice">
+                        <div class="menu-badges">
+                            <span class="menu-badge badge-popular">⭐ Popular</span>
+                            <span class="menu-badge badge-veggie">🌿 Veggie</span>
+                        </div>
+                        <div class="menu-price">
+                            <span>₵35</span>
+                        </div>
+                    </div>
+                    <div class="menu-content">
+                        <h3>Jollof Rice</h3>
+                        <p>Aromatic rice cooked in rich tomato sauce with spices and vegetables</p>
+                        <button class="order-btn">Order In Chatbot</button>
+                    </div>
+                </div>
+
+                <!-- Waakye -->
+                <div class="menu-item">
+                    <div class="menu-image">
+                        <img src="Waakye.jpg" alt="Waakye">
+                        <div class="menu-badges">
+                            <span class="menu-badge badge-veggie">🌿 Veggie</span>
+                        </div>
+                        <div class="menu-price">
+                            <span>₵40</span>
+                        </div>
+                    </div>
+                    <div class="menu-content">
+                        <h3>Waakye</h3>
+                        <p>Rice and beans cooked together, served with gari, egg, and shito</p>
+                        <button class="order-btn">Order In Chatbot</button>
+                    </div>
+                </div>
+
+                <!-- Fufu -->
+                <div class="menu-item">
+                    <div class="menu-image">
+                        <img src="fufu.jfif" alt="Fufu">
+                        <div class="menu-badges">
+                            <span class="menu-badge badge-popular">⭐ Popular</span>
+                        </div>
+                        <div class="menu-price">
+                            <span>₵55</span>
+                        </div>
+                    </div>
+                    <div class="menu-content">
+                        <h3>Fufu</h3>
+                        <p>Pounded cassava and plantain served with palm nut soup, peanut soup or light soup</p>
+                        <button class="order-btn">Order In Chatbot</button>
+                    </div>
+                </div>
+
+                <!-- Ampesi -->
+                <div class="menu-item">
+                    <div class="menu-image">
+                        <img src="ampesi.jpg" alt="Ampesi">
+                        <div class="menu-badges">
+                            <span class="menu-badge badge-veggie">🌿 Veggie</span>
+                        </div>
+                        <div class="menu-price">
+                            <span>₵25</span>
+                        </div>
+                    </div>
+                    <div class="menu-content">
+                        <h3>Ampesi</h3>
+                        <p>Boiled yam, plantain, and cocoyam served with plain stew or kontomire stew</p>
+                        <button class="order-btn">Order In Chatbot</button>
+                    </div>
+                </div>
+
+                <!-- Pizza -->
+                <div class="menu-item">
+                    <div class="menu-image">
+                        <img src="pizza.jpg" alt="Pizza">
+                        <div class="menu-badges">
+                            <span class="menu-badge badge-veggie">🌿 Veggie</span>
+                        </div>
+                        <div class="menu-price">
+                            <span>₵50</span>
+                        </div>
+                    </div>
+                    <div class="menu-content">
+                        <h3>Pizza</h3>
+                        <p>Wood-fired pizza with local ingredients and international flavors</p>
+                        <button class="order-btn">Order In Chatbot</button>
+                    </div>
+                </div>
+
+                <!-- Fried Rice -->
+                <div class="menu-item">
+                    <div class="menu-image">
+                        <img src="pizza.jpg" alt="Fried Rice">
+                        <div class="menu-badges">
+                            <span class="menu-badge badge-veggie">🌿 Veggie</span>
+                        </div>
+                        <div class="menu-price">
+                            <span>₵45</span>
+                        </div>
+                    </div>
+                    <div class="menu-content">
+                        <h3>Fried Rice</h3>
+                        <p>Perfectly seasoned rice stir-fried with vegetables, eggs, and choice of protein</p>
+                        <button class="order-btn">Order In Chatbot</button>
+                    </div>
+                </div>
+
+                <!-- Red Red (Beans) -->
+                <div class="menu-item">
+                    <div class="menu-image">
+                        <img src="beans.png" alt="Red Red Beans">
+                        <div class="menu-badges">
+                            <span class="menu-badge badge-popular">⭐ Popular</span>
+                            <span class="menu-badge badge-veggie">🌿 Veggie</span>
+                        </div>
+                        <div class="menu-price">
+                            <span>₵20</span>
+                        </div>
+                    </div>
+                    <div class="menu-content">
+                        <h3>Red Red (Beans)</h3>
+                        <p>Rich bean stew cooked in palm oil, served with fried plantain and gari</p>
+                        <button class="order-btn">Order In Chatbot</button>
+                    </div>
+                </div>
+
+                <!-- Plain Rice -->
+                <div class="menu-item">
+                    <div class="menu-image">
+                        <img src="plainrice.jpg" alt="Plain Rice">
+                        <div class="menu-badges">
+                            <span class="menu-badge badge-veggie">🌿 Veggie</span>
+                        </div>
+                        <div class="menu-price">
+                            <span>₵40</span>
+                        </div>
+                    </div>
+                    <div class="menu-content">
+                        <h3>Plain Rice</h3>
+                        <p>Steamed jasmine rice, perfect as a side or with your favorite stew</p>
+                        <button class="order-btn">Order In Chatbot</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="playfair">About Ama Eatery</h2>
+                    <p>
+                        Located in the vibrant heart of Accra, Ama Eatery is more than just a restaurant - 
+                        it's a celebration of Ghanaian culinary heritage served with contemporary flair.
+                    </p>
+                    <p>
+                        Our passionate chefs blend traditional cooking methods with modern presentation, 
+                        creating an unforgettable dining experience that honors our roots while embracing innovation.
+                    </p>
+
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-number">5+</div>
+                            <div class="stat-label">Years Serving</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">1000+</div>
+                            <div class="stat-label">Happy Customers</div>
+                        </div>
+                    </div>
+
+                    <div class="visit-card">
+                        <h3>Visit Us</h3>
+                        <div class="contact-info">
+                            <span>📍</span>
+                            <span>123 Liberation Road, Accra, Greater Accra Region, Ghana</span>
+                        </div>
+                        <div class="contact-info">
+                            <span>🕙</span>
+                            <span>Monday - Sunday: 10:00 AM - 10:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=600&h=400&fit=crop&crop=center" alt="Ama Eatery Interior">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Brand -->
+                <div class="footer-section">
+                    <h3 class="playfair">Ama Eatery</h3>
+                    <p>Authentic Ghanaian cuisine served with love and pride in the heart of Accra.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">f</a>
+                        <a href="#" class="social-link">📷</a>
+                        <a href="#" class="social-link">🐦</a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#">Reservations</a></li>
+                        <li><a href="#">Catering</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-item">
+                        <span>📞</span>
+                        <span>+233 123 456 789</span>
+                    </div>
+                    <div class="contact-item">
+                        <span>✉️</span>
+                        <span>info@amaeatery.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <span>📍</span>
+                        <span>123 Liberation Road<br>Accra, Ghana</span>
+                    </div>
+                </div>
+
+                <!-- Hours -->
+                <div class="footer-section">
+                    <h4>Opening Hours</h4>
+                    <div class="hours-table">
+                        <div class="hours-row">
+                            <span>Monday - Friday</span>
+                            <span>10AM - 10PM</span>
+                        </div>
+                        <div class="hours-row">
+                            <span>Saturday</span>
+                            <span>10AM - 11PM</span>
+                        </div>
+                        <div class="hours-row">
+                            <span>Sunday</span>
+                            <span>12PM - 9PM</span>
+                        </div>
+                    </div>
+                    
+                    <div class="special-offer">
+                        <h5>Special Offer!</h5>
+                        <p>Get 10% off your first order when you mention this website!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2024 Ama Eatery. All rights reserved. Made with ❤️ in Accra, Ghana.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot Widget -->
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+  intent="WELCOME"
+  chat-title="AmaEateryBot"
+  agent-id="0555c2e0-0316-44a3-ac7b-4d4544f66a9e"
+  language-code="en">
+</df-messenger>
+
+
+</body>
+</html>
