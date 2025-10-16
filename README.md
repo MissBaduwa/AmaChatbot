@@ -1,9 +1,9 @@
-# 🍔💬 AmaChatBot — AI-Powered Chatbot with FastAPI & Dialogflow
+# 🍔💬 AmaBot — AI-Powered Chatbot with FastAPI & Dialogflow
 
-Welcome to **AmaChatBot** — a fully functional food ordering assistant built with 🧠 Dialogflow for NLP, 🐍 FastAPI for backend logic, and styled using nothing but plain HTML/CSS for a surprisingly cute frontend.
+Welcome to **AmaBot** — a fully functional food ordering assistant built with 🧠 Dialogflow for NLP, 🐍 FastAPI for backend logic, and styled using nothing but plain HTML/CSS for a surprisingly cute frontend.
 
 ## 🧠 What It Does
-AmaEateryBot understands food orders, updates items, tracks existing orders, and responds conversationally. All requests are routed through a FastAPI backend connected to a MySQL database with stored procedures — no hacks, just real engineering.
+AmaBot understands food orders, updates items, tracks existing orders, and responds conversationally. All requests are routed through a FastAPI backend connected to a MySQL database with stored procedures — no hacks, just real engineering.
 
 > Despite the clean and playful interface, the system underneath is seriously robust.
 
